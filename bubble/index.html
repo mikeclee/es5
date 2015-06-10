@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lange="en-US">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Bubble</title>
+    <link rel="stylesheet" type="text/css" href="_css/main.css"/>
+    <script src="_js/modernizr.js"></script>
+    <script>
+      Modernizr.load([{
+        load: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js",
+        complete: function() {
+          if (!window.jQuery) {
+            Modernizr.load("_js/jquery-1.11.3.min.js");
+          }
+        }
+      },
+      {
+        load: "_js/game.js"
+      }]);
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <div id="top_bar"></div>
+      <div id="game"></div>
+      <div id="footer_bar">
+        <div id="start_game" class="dialog">
+          <div id="start_game_message"></div>
+          <h2>Start a new game</h2>
+        </div>
+        <div class="but_start_game button">New Game</div>
+      </div>
+    </div>
+  </body>
+</html>
